@@ -45,7 +45,6 @@ char getComputerChoice(){
 }
 
 void showChoice(char choice){
-    
     switch(choice){
         case 'r':
             std::cout << "Rock\n";
