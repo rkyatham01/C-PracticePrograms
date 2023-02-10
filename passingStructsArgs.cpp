@@ -8,6 +8,7 @@ struct Car{
 };
 
 void printCar(Car &car);
+void paintCar(Car &car, std::string color);
 
 int main(){ //structs are pass by value instead of pass by reference
     Car car1;
@@ -20,7 +21,10 @@ int main(){ //structs are pass by value instead of pass by reference
     car2.model = "Corvette";
     car2.year = 2024;
     car2.color = "blue";
-    
+    //paints the car
+    paintCar(car1, "silver");
+    paintCar(car2, "gold");
+
     printCar(car1);
     printCar(car2);
     return 0;
@@ -30,4 +34,8 @@ void printCar(Car &car){
     std::cout << car.model << '\n';
     std::cout << car.year << '\n';
     std::cout << car.color << '\n';
+}
+
+void paintCar(Car &car, std::string color){
+    car.color = color;
 }
